@@ -1,14 +1,11 @@
-export default function Log({ currentGame }) {
+export default function Log({ turns }) {
   return (
-    <ol id='log'>
-      {currentGame.length === 0
-        ? undefined
-        : currentGame.map((players) => (
-            <li key={`${players.square.row}${players.square.col}`}>
-              {players.player} selected {players.square.row},
-              {players.square.col}
-            </li>
-          ))}
+    <ol id="log">
+      {turns.map((turn) => (
+        <li key={`${turn.square.row}${turn.square.col}`}>
+          {turn.player} selected {turn.square.row},{turn.square.col}
+        </li>
+      ))}
     </ol>
   );
 }
