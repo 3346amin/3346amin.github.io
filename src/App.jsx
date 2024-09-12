@@ -136,6 +136,7 @@ function App() {
   return (
     <main>
       <div id="game-container">
+      <>amin</>
         <ol id="players" className="highlight-player">
           <Player
             initialName={PLAYERS.X}
